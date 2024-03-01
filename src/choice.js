@@ -97,7 +97,7 @@ export default function Choice({player,header,setHeader,posRef}) {
           setHeader(player[i].alt)
         }
         else{
-          // remove 'select hover class
+          // remove 'select hover' class
           items[i].classList.remove(selected)
         }
         
