@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/tile-selection-tool-interactive/static/css/main.523ef2df.css",
+    "main.js": "/tile-selection-tool-interactive/static/js/main.f3847507.js",
+    "static/js/453.901755bb.chunk.js": "/tile-selection-tool-interactive/static/js/453.901755bb.chunk.js",
+    "index.html": "/tile-selection-tool-interactive/index.html",
+    "main.523ef2df.css.map": "/tile-selection-tool-interactive/static/css/main.523ef2df.css.map",
+    "main.f3847507.js.map": "/tile-selection-tool-interactive/static/js/main.f3847507.js.map",
+    "453.901755bb.chunk.js.map": "/tile-selection-tool-interactive/static/js/453.901755bb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.523ef2df.css",
+    "static/js/main.f3847507.js"
+  ]
+}
