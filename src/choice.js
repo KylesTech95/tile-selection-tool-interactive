@@ -145,8 +145,6 @@ export default function Choice({player,header,setHeader,posRef}) {
       
     }
   }
- 
-
 
   // memoization technique:
   /*
