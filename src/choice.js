@@ -1,7 +1,7 @@
 import { React,useEffect, useCallback, useState, useRef } from 'react'
   import './App.css'
 
-export default function Choice({player,header,setHeader,posRef}) {
+export default function Choice({player,header,setHeader,posRef,setPlayer}) {
   const listRef = useRef()
   // states
   const [selected,secSelected]=useState('select-hover')
@@ -78,12 +78,17 @@ export default function Choice({player,header,setHeader,posRef}) {
      const bod = document.body
      // if user clicks one of the 4 array keys...
     if(/(left|right|up|down)/i.test(event.key)){
+      // test slicing player state
+      // setPlayer([...player].slice(0,-1))
       // update the target object's position on keypress
       updateTarget(event.key,target)
       // iterate through the items
       for(let i = 0; i < items.length; i++){
         // convery array to an object
         let obj = arrayToObject(player,i)
+        // console.log(obj)
+        // console.log(items[i])
+        // console.log("\n")
         // Each player's key propery is lowered by 1 (0-based index) and stored in "real_key"
         let real_key = player[i].key-1
         // if 1)i==real_key, and 2)object's value === target's value...

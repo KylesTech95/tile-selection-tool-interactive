@@ -116,7 +116,7 @@ function App() {
       <Btn {...{insRef}}/>
       <Header {...{header}}/>
       {/*Add player prop to Choice*/}
-      <Choice {...{player,header,setHeader,posRef}}/>
+      <Choice {...{player,header,setHeader,posRef,setPlayer}}/>
     </div>
   );
 }
