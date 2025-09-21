@@ -40,6 +40,7 @@ justify-content: center;
   flex-wrap:wrap;
   justify-content: center;
   align-items: center;
+  z-index: 999;
   gap:8px;
 }
 #header-container,
@@ -98,6 +99,8 @@ justify-content: center;
   justify-content:center;
   gap:1rem;
   transition:.75s;
+  z-index: 999;
+  background:#fff
 }
 .display-hide{
   transform:scale(0) translate(0,-100px);
@@ -111,6 +114,7 @@ background:rgb(221, 219, 219);
 color:#333;
 }
 .ins-btn{
+  z-index: 999;
   transition:.25s;
   font-family: "Zen Tokyo Zoo", system-ui;
   font-size:20px;
@@ -162,19 +166,23 @@ img{
 @media screen and (max-width: 900px) and (max-height:750px){
   img{
     height:150px;
-    width:150px;
   }
   .list-container{
-    width:600px;
+  }
+  .ins-btn{
+    bottom:5%;
   }
 }
 @media screen and (max-width: 750px) and (max-height:900px){
   img{
     height:150px;
-    width:150px;
   }
   .list-container{
-    width:100%;
+  }
+  .ins-btn{
+    position:absolute;
+    bottom:5% !important;
+    
   }
 }
 @media screen and (max-width: 400px) and (max-height:900px){
@@ -183,14 +191,9 @@ img{
     width:75px;
   }
   .list-container{
-    width:300px;
   }
-  .ins-btn{
-    position:absolute;
-    left:140px;
-    bottom:5%;
-    
-  }
+  
+
 }
 @media screen and (max-width:900px) and (max-height:400px){
   img{
@@ -198,12 +201,14 @@ img{
     width:75px;
   }
   .list-container{
-    width:300px;
   }
   .ins-btn{
     position:absolute;
-    left:140px;
-    bottom:5%;
+    
+  }
+  .ins-btn{
+    position:absolute;
+    bottom:15% !important;
     
   }
 }
