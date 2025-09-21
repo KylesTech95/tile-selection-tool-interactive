@@ -7,6 +7,7 @@ import rabbit from "./media/rabbit.jpeg"
 import mongoose from "./media/mongoosy.jpeg"
 import { useState, useRef, useEffect, useCallback } from 'react'
 
+// object
 function Object({posObj,player,posRef}) {
 const whichPos = (player) => {
   let items = document.querySelectorAll('.list-item');
@@ -24,14 +25,26 @@ const whichPos = (player) => {
     </div>
   )
 }
+// title
+function Title({title}){
+return (
+  <div id="title-container">
+    <h2 id="title-actual">{title}</h2>
+  </div>
+)
+}
+
+// header
  function Header({header}) {
   return (
     <div id="header-container">
       <h1 className="header-actual">{header}</h1>
+      
     </div>
   )
 }
 
+// button
 function Btn({insRef}){
   const btnRef = useRef();
   const handleBtn = () => {
@@ -45,6 +58,7 @@ function Btn({insRef}){
     )
 }
 
+// instructions
 function Instructions({insRef}) {
   return (
     <div id="instructions-container" ref={insRef} className="display-hide">
@@ -67,6 +81,7 @@ function App() {
   const posRef = useRef();
   const [posObj,setPosObj]=useState('{}')
   const [header,setHeader]=useState('Welcome')
+  const [title,setTitle]=useState('Character Tile Selection')
   //  Array of player objects {prop:value}
   const [player,setPlayer]=useState([
     {
@@ -111,6 +126,7 @@ function App() {
   // return render
   return (
     <div id="app-container">
+      <Title {...{title}}/>
       <Object {...{posObj,player,posRef}}/>
       <Instructions {...{insRef}}/>
       <Btn {...{insRef}}/>
